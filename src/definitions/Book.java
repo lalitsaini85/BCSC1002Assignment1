@@ -52,4 +52,13 @@ public class Book {
     public void setIsbnNumberOfBook(String isbnNumberOfBook) {
         this.isbnNumberOfBook = isbnNumberOfBook;
     }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "nameOfBook='" + nameOfBook + '\'' +
+                ", nameOfAuthorOfBook='" + nameOfAuthorOfBook + '\'' +
+                ", isbnNumberOfBook='" + isbnNumberOfBook + '\'' +
+                '}';
+    }
 }
