@@ -17,5 +17,6 @@ public class FrontDesk {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        int studentInput;
     }
 }
