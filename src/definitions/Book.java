@@ -23,6 +23,12 @@ public class Book {
         this.isbnNumberOfBook = isbnNumberOfBook;
     }
 
+    public Book(String nameOfBook) {
+        this.nameOfBook = nameOfBook;
+        this.nameOfAuthorOfBook = "Sierra Kathy";
+        this.isbnNumberOfBook = "OCA1219";
+    }
+
     public String getNameOfBook() {
         return nameOfBook;
     }
