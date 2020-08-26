@@ -13,6 +13,9 @@ public class Library {
 
     public Library() {
         this.currentlyAvailableBooks = new Book[10];
+        for (int index = 0; index < currentlyAvailableBooks.length; index++) {
+            currentlyAvailableBooks[index] = new Book();
+        }
     }
 
     public Library(Book[] currentlyAvailableBooks) {
