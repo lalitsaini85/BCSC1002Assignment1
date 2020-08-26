@@ -11,6 +11,10 @@ import java.util.Arrays;
 public class Library {
     private Book[] currentlyAvailableBooks;
 
+    public Library() {
+        this.currentlyAvailableBooks = new Book[10];
+    }
+
     public Library(Book[] currentlyAvailableBooks) {
         this.currentlyAvailableBooks = currentlyAvailableBooks;
     }
@@ -26,7 +30,7 @@ public class Library {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Library)) return false;
+        if (o == null || getClass() != o.getClass()) return false;
         Library library = (Library) o;
         return Arrays.equals(getCurrentlyAvailableBooks(), library.getCurrentlyAvailableBooks());
     }
@@ -39,7 +43,7 @@ public class Library {
     @Override
     public String toString() {
         return "Library{" +
-                "currentlyAvailableBooks=" + Arrays.toString(currentlyAvailableBooks) +
+                "currently Available Books=" + Arrays.toString(currentlyAvailableBooks) +
                 '}';
     }
 }

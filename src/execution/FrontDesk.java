@@ -6,7 +6,7 @@
  * */
 package execution;
 
-import java.util.Scanner;
+import definitions.Book;
 
 public class FrontDesk {
 
@@ -16,7 +16,9 @@ public class FrontDesk {
     private static final int EXIT = 4;
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int studentInput;
+        //Scanner scanner = new Scanner(System.in);
+        //int studentInput;
+        Book book = new Book();
+        System.out.println(book);
     }
 }

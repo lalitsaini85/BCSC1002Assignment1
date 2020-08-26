@@ -58,16 +58,16 @@ public class Book {
     @Override
     public String toString() {
         return "Book{" +
-                "nameOfBook='" + nameOfBook + '\'' +
-                ", nameOfAuthorOfBook='" + nameOfAuthorOfBook + '\'' +
-                ", isbnNumberOfBook='" + isbnNumberOfBook + '\'' +
+                "name of the Book='" + nameOfBook + '\'' +
+                ", name of Author of the Book='" + nameOfAuthorOfBook + '\'' +
+                ", ISBN Number of the Book='" + isbnNumberOfBook + '\'' +
                 '}';
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Book)) return false;
+        if (o == null || getClass() != o.getClass()) return false;
         Book book = (Book) o;
         return Objects.equals(getNameOfBook(), book.getNameOfBook()) &&
                 Objects.equals(getNameOfAuthorOfBook(), book.getNameOfAuthorOfBook()) &&
