@@ -51,7 +51,7 @@ public class Library {
     }
 
     /**
-     * This method shows a list of all the books in our library.
+     * This method shows a list of all the issued books in our library.
      */
     public void showAllIssuedBooks() {
         for (Book availableBook : currentlyAvailableBooks) {
