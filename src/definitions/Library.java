@@ -49,4 +49,13 @@ public class Library {
                 "currently Available Books=" + Arrays.toString(currentlyAvailableBooks) +
                 '}';
     }
+
+    /**
+     * This method shows a list of all the books in our library.
+     */
+    public void showAllIssuedBooks() {
+        for (Book availableBook : currentlyAvailableBooks) {
+            System.out.println(availableBook);
+        }
+    }
 }
