@@ -6,6 +6,10 @@
  * */
 package execution;
 
+import definitions.Book;
+import definitions.Library;
+import definitions.Student;
+
 import java.util.Scanner;
 
 public class FrontDesk {
@@ -18,6 +22,9 @@ public class FrontDesk {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int studentInput;
+        Library myBooks = new Library();
+        Book book = new Book();
+        Student student = new Student();
         do {
             System.out.println("-=-=--=-=-\"Welcome To The Front Desk\"-=-=--=-=-");
             System.out.println("How may I help you today?");
@@ -29,13 +36,27 @@ public class FrontDesk {
             studentInput = scanner.nextInt();
             switch (studentInput) {
                 case ISSUE_NEW_BOOK:
+                    System.out.println("Enter your name: ");
+                    scanner.nextLine();
+                    String studentName = scanner.nextLine();
+                    student.setNameOfStudent(studentName);
+                    System.out.println("Enter your university roll number: ");
+                    long universityNumber = scanner.nextLong();
+                    student.setUniversityRollNumberOfStudent(universityNumber);
                     System.out.println("Enter the name of the book that you want: ");
+                    scanner.nextLine();
+                    String bookName = scanner.nextLine();
+                    System.out.println("Enter the 13-digit ISBN number of the book: ");
+                    scanner.nextLine();
+                    String bookNumber = scanner.nextLine();
+                    book.setNameOfBook(bookName);
+                    book.setIsbnNumberOfBook(bookNumber);
+
                     break;
                 case RETURN_PREVIOUSLY_ISSUES_BOOK:
                     break;
                 case SHOW_ALL_MY_ISSUES_BOOKS:
-                    break;
-                case EXIT:
+                    myBooks.showAllIssuedBooks();
                     break;
                 default:
                     System.out.println("WRONG CHOICE!!");

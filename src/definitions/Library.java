@@ -58,4 +58,13 @@ public class Library {
             System.out.println(availableBook);
         }
     }
+
+    /**
+     * This method add issued book in student account.
+     *
+     * @param name The name of the book to be added.
+     */
+    public void addBook(String name) {
+        System.out.println("You have issued " + name);
+    }
 }
