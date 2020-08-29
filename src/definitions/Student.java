@@ -105,4 +105,13 @@ public class Student {
     public void addIssuedBook(String bookName, String studentName) {
         System.out.println(studentName + ", You have issued " + bookName + ".");
     }
+
+    /**
+     * This method displays list of all the issued book by the student.
+     */
+    public void showAllMyIssuedBooks() {
+        for (Book book : allNamesOfBooksIssuedByStudent) {
+            System.out.println(book);
+        }
+    }
 }

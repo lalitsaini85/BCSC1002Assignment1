@@ -56,7 +56,7 @@ public class FrontDesk {
                     break;
                 case SHOW_ALL_MY_ISSUES_BOOKS:
                     System.out.println(student.getNumberOfBooksIssuedByStudent());
-                    //student.showAllMyIssuedBooks();
+                    student.showAllMyIssuedBooks();
                     System.out.println(book.getNameOfBook());
                     break;
                 default:
