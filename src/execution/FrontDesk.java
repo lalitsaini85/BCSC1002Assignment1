@@ -27,6 +27,13 @@ public class FrontDesk {
         Book book = new Book();
         Student student = new Student();
         do {
+            System.out.println("Enter your name: ");
+            scanner.nextLine();
+            String studentName = scanner.nextLine();
+            student.setNameOfStudent(studentName);
+            System.out.println("Enter your university roll number: ");
+            long universityNumber = scanner.nextLong();
+            student.setUniversityRollNumberOfStudent(universityNumber);
             System.out.println("-=-=--=-=-\"Welcome To The Front Desk\"-=-=--=-=-");
             System.out.println("How may I help you today?");
             System.out.println("1. Issue a new book for me.");
@@ -37,19 +44,11 @@ public class FrontDesk {
             studentInput = scanner.nextInt();
             switch (studentInput) {
                 case ISSUE_NEW_BOOK:
-                    System.out.println("Enter your name: ");
-                    scanner.nextLine();
-                    String studentName = scanner.nextLine();
-                    student.setNameOfStudent(studentName);
-                    System.out.println("Enter your university roll number: ");
-                    long universityNumber = scanner.nextLong();
-                    student.setUniversityRollNumberOfStudent(universityNumber);
                     System.out.println("Enter the name of the book that you want: ");
                     scanner.nextLine();
                     String bookName = scanner.nextLine();
                     book.setNameOfBook(bookName);
-                    myBooks.addBook(bookName);
-                    //student.addIssuedBooks(bookName);
+                    student.addIssuedBook(bookName, studentName);
                     countOfIssuedBook += 1;
                     student.setNumberOfBooksIssuedByStudent(countOfIssuedBook);
                     break;
@@ -57,7 +56,7 @@ public class FrontDesk {
                     break;
                 case SHOW_ALL_MY_ISSUES_BOOKS:
                     System.out.println(student.getNumberOfBooksIssuedByStudent());
-                    //myBooks.showAllBooks();
+                    //student.showAllMyIssuedBooks();
                     System.out.println(book.getNameOfBook());
                     break;
                 default:

@@ -26,7 +26,14 @@ public class Student {
         nameOfStudent = getNameOfStudent();
         universityRollNumberOfStudent = getUniversityRollNumberOfStudent();
         numberOfBooksIssuedByStudent = getNumberOfBooksIssuedByStudent();
-        allNamesOfBooksIssuedByStudent = getAllNamesOfBooksIssuedByStudent();
+        this.allNamesOfBooksIssuedByStudent = new Book[numberOfBooksIssuedByStudent];
+        for (int index = 0; index < allNamesOfBooksIssuedByStudent.length; index++) {
+            allNamesOfBooksIssuedByStudent[index] = new Book();
+        }
+    }
+
+    public Student(Book[] allNamesOfBooksIssuedByStudent) {
+        this.allNamesOfBooksIssuedByStudent = allNamesOfBooksIssuedByStudent;
     }
 
     public String getNameOfStudent() {
@@ -89,12 +96,7 @@ public class Student {
                 '}';
     }
 
-    public void addIssuedBooks(String name) {
-        for (int index = 0; index < getNumberOfBooksIssuedByStudent(); index++) {
-            allNamesOfBooksIssuedByStudent[index] = new Book();
-        }
-        for (Book nameOfBook : allNamesOfBooksIssuedByStudent) {
-            System.out.println(nameOfBook);
-        }
+    public void addIssuedBook(String bookName, String studentName) {
+        System.out.println(studentName + ", You have issued " + bookName + ".");
     }
 }
