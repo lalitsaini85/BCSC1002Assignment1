@@ -10,12 +10,11 @@ import java.util.Arrays;
 import java.util.Objects;
 
 public class Student {
+    Book book = new Book();
     private String nameOfStudent;
     private long universityRollNumberOfStudent;
     private int numberOfBooksIssuedByStudent;
     private Book[] allNamesOfBooksIssuedByStudent;
-
-    Book book = new Book();
 
     public Student(String nameOfStudent, long universityRollNumberOfStudent, int numberOfBooksIssuedByStudent, Book[] allNamesOfBooksIssuedByStudent) {
         this.nameOfStudent = nameOfStudent;
