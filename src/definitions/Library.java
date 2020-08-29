@@ -51,16 +51,16 @@ public class Library {
     }
 
     /**
-     * This method shows a list of all the issued books in our library.
+     * This method shows a list of all the books in our library.
      */
-    public void showAllIssuedBooks() {
+    public void showAllBooks() {
         for (Book availableBook : currentlyAvailableBooks) {
             System.out.println(availableBook);
         }
     }
 
     /**
-     * This method add issued book in student account.
+     * This method show issued book by student.
      *
      * @param name The name of the book to be added.
      */

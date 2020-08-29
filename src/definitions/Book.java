@@ -14,9 +14,9 @@ public class Book {
     private String isbnNumberOfBook;
 
     public Book() {
-        nameOfBook = "Sun Certified Programmer For Java";
-        nameOfAuthorOfBook = "Kathy Sierra";
-        isbnNumberOfBook = "OOP1219";
+        nameOfBook = getNameOfBook();
+        nameOfAuthorOfBook = getNameOfAuthorOfBook();
+        isbnNumberOfBook = getIsbnNumberOfBook();
     }
 
     public Book(String nameOfBook, String nameOfAuthorOfBook, String isbnNumberOfBook) {
@@ -28,7 +28,7 @@ public class Book {
     public Book(String nameOfBook) {
         this.nameOfBook = nameOfBook;
         this.nameOfAuthorOfBook = "Sierra Kathy";
-        this.isbnNumberOfBook = "OCA1219";
+        this.isbnNumberOfBook = "123-456-896-5824";
     }
 
     public String getNameOfBook() {

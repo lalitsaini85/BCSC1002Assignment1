@@ -15,6 +15,20 @@ public class Student {
     private int numberOfBooksIssuedByStudent;
     private Book[] allNamesOfBooksIssuedByStudent;
 
+    public Student(String nameOfStudent, long universityRollNumberOfStudent, int numberOfBooksIssuedByStudent, Book[] allNamesOfBooksIssuedByStudent) {
+        this.nameOfStudent = nameOfStudent;
+        this.universityRollNumberOfStudent = universityRollNumberOfStudent;
+        this.numberOfBooksIssuedByStudent = numberOfBooksIssuedByStudent;
+        this.allNamesOfBooksIssuedByStudent = allNamesOfBooksIssuedByStudent;
+    }
+
+    public Student() {
+        nameOfStudent = getNameOfStudent();
+        universityRollNumberOfStudent = getUniversityRollNumberOfStudent();
+        numberOfBooksIssuedByStudent = getNumberOfBooksIssuedByStudent();
+        allNamesOfBooksIssuedByStudent = getAllNamesOfBooksIssuedByStudent();
+    }
+
     public String getNameOfStudent() {
         return nameOfStudent;
     }
@@ -73,5 +87,14 @@ public class Student {
                 ", number of the Books Issued by the Student=" + numberOfBooksIssuedByStudent +
                 ", all Names of the Books Issued by the Student=" + Arrays.toString(allNamesOfBooksIssuedByStudent) +
                 '}';
+    }
+
+    public void addIssuedBooks(String name) {
+        for (int index = 0; index < getNumberOfBooksIssuedByStudent(); index++) {
+            allNamesOfBooksIssuedByStudent[index] = new Book();
+        }
+        for (Book nameOfBook : allNamesOfBooksIssuedByStudent) {
+            System.out.println(nameOfBook);
+        }
     }
 }

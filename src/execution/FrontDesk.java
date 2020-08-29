@@ -22,6 +22,7 @@ public class FrontDesk {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int studentInput;
+        int countOfIssuedBook = 0;
         Library myBooks = new Library();
         Book book = new Book();
         Student student = new Student();
@@ -46,17 +47,18 @@ public class FrontDesk {
                     System.out.println("Enter the name of the book that you want: ");
                     scanner.nextLine();
                     String bookName = scanner.nextLine();
-                    System.out.println("Enter the 13-digit ISBN number of the book: ");
-                    scanner.nextLine();
-                    String bookNumber = scanner.nextLine();
                     book.setNameOfBook(bookName);
-                    book.setIsbnNumberOfBook(bookNumber);
-
+                    myBooks.addBook(bookName);
+                    //student.addIssuedBooks(bookName);
+                    countOfIssuedBook += 1;
+                    student.setNumberOfBooksIssuedByStudent(countOfIssuedBook);
                     break;
                 case RETURN_PREVIOUSLY_ISSUES_BOOK:
                     break;
                 case SHOW_ALL_MY_ISSUES_BOOKS:
-                    myBooks.showAllIssuedBooks();
+                    System.out.println(student.getNumberOfBooksIssuedByStudent());
+                    //myBooks.showAllBooks();
+                    System.out.println(book.getNameOfBook());
                     break;
                 default:
                     System.out.println("WRONG CHOICE!!");
