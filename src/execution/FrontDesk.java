@@ -28,7 +28,6 @@ public class FrontDesk {
         Student student = new Student();
         do {
             System.out.println("Enter your name: ");
-            scanner.nextLine();
             String studentName = scanner.nextLine();
             student.setNameOfStudent(studentName);
             System.out.println("Enter your university roll number: ");
@@ -56,8 +55,8 @@ public class FrontDesk {
                     break;
                 case SHOW_ALL_MY_ISSUES_BOOKS:
                     System.out.println(student.getNumberOfBooksIssuedByStudent());
-                    student.showAllMyIssuedBooks();
                     System.out.println(book.getNameOfBook());
+                    student.showAllMyIssuedBooks();
                     break;
                 default:
                     System.out.println("WRONG CHOICE!!");

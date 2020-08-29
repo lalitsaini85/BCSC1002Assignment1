@@ -114,4 +114,13 @@ public class Student {
             System.out.println(book);
         }
     }
+
+    /**
+     * This method display return book.
+     *
+     * @param bookName name of the book that you have returned.
+     */
+    public void returnBook(String bookName) {
+        System.out.println("Thank you for returning Book: " + bookName);
+    }
 }
