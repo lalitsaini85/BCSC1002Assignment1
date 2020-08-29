@@ -96,6 +96,12 @@ public class Student {
                 '}';
     }
 
+    /**
+     * This method displays issued book by the student.
+     *
+     * @param bookName    The name of the book to be added.
+     * @param studentName The name of the student to be added.
+     */
     public void addIssuedBook(String bookName, String studentName) {
         System.out.println(studentName + ", You have issued " + bookName + ".");
     }
