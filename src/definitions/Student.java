@@ -15,6 +15,8 @@ public class Student {
     private int numberOfBooksIssuedByStudent;
     private Book[] allNamesOfBooksIssuedByStudent;
 
+    Book book = new Book();
+
     public Student(String nameOfStudent, long universityRollNumberOfStudent, int numberOfBooksIssuedByStudent, Book[] allNamesOfBooksIssuedByStudent) {
         this.nameOfStudent = nameOfStudent;
         this.universityRollNumberOfStudent = universityRollNumberOfStudent;
@@ -104,6 +106,9 @@ public class Student {
      */
     public void addIssuedBook(String bookName, String studentName) {
         System.out.println(studentName + ", You have issued " + bookName + ".");
+        for (int i = 0; i < allNamesOfBooksIssuedByStudent.length; i++) {
+            allNamesOfBooksIssuedByStudent[i] = book.setNameOfBook(bookName);
+        }
     }
 
     /**
@@ -120,7 +125,7 @@ public class Student {
      *
      * @param bookName name of the book that you have returned.
      */
-    public void returnBook(String bookName) {
+    public void doReturnBook(String bookName) {
         System.out.println("Thank you for returning Book: " + bookName);
     }
 }

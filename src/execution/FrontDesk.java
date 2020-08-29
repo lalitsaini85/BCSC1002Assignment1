@@ -27,12 +27,6 @@ public class FrontDesk {
         Book book = new Book();
         Student student = new Student();
         do {
-            System.out.println("Enter your name: ");
-            String studentName = scanner.nextLine();
-            student.setNameOfStudent(studentName);
-            System.out.println("Enter your university roll number: ");
-            long universityNumber = scanner.nextLong();
-            student.setUniversityRollNumberOfStudent(universityNumber);
             System.out.println("-=-=--=-=-\"Welcome To The Front Desk\"-=-=--=-=-");
             System.out.println("How may I help you today?");
             System.out.println("1. Issue a new book for me.");
@@ -41,8 +35,17 @@ public class FrontDesk {
             System.out.println("4. Exit.");
             System.out.println("Enter your choice from 1 to 4: ");
             studentInput = scanner.nextInt();
+            //int countIssuedBook = student.getNumberOfBooksIssuedByStudent();
+            //student.setNumberOfBooksIssuedByStudent(countIssuedBook--);
             switch (studentInput) {
-                case ISSUE_NEW_BOOK:
+                case ISSUE_NEW_BOOK -> {
+                    System.out.println("Enter your name: ");
+                    scanner.nextLine();
+                    String studentName = scanner.nextLine();
+                    student.setNameOfStudent(studentName);
+                    System.out.println("Enter your university roll number: ");
+                    long universityNumber = scanner.nextLong();
+                    student.setUniversityRollNumberOfStudent(universityNumber);
                     System.out.println("Enter the name of the book that you want: ");
                     scanner.nextLine();
                     String bookName = scanner.nextLine();
@@ -50,16 +53,16 @@ public class FrontDesk {
                     student.addIssuedBook(bookName, studentName);
                     countOfIssuedBook += 1;
                     student.setNumberOfBooksIssuedByStudent(countOfIssuedBook);
-                    break;
-                case RETURN_PREVIOUSLY_ISSUES_BOOK:
-                    break;
-                case SHOW_ALL_MY_ISSUES_BOOKS:
-                    System.out.println(student.getNumberOfBooksIssuedByStudent());
+                }
+                case RETURN_PREVIOUSLY_ISSUES_BOOK -> {
+                    student.doReturnBook(book.getNameOfBook());
+                    book.setNameOfBook(null);
+                }
+                case SHOW_ALL_MY_ISSUES_BOOKS -> {
                     System.out.println(book.getNameOfBook());
                     student.showAllMyIssuedBooks();
-                    break;
-                default:
-                    System.out.println("WRONG CHOICE!!");
+                }
+                default -> System.out.println("WRONG CHOICE!!");
             }
         } while (studentInput != EXIT);
     }
