@@ -39,7 +39,7 @@ public class FrontDesk {
             studentInput = scanner.nextInt();
             switch (studentInput) {
                 case ISSUE_NEW_BOOK -> {
-                    System.out.println("Enter your name: ");
+                    System.out.println("Enter your name as firstName middleName lastName: ");
                     scanner.nextLine();
                     String studentName = scanner.nextLine();
                     student.setNameOfStudent(studentName);
