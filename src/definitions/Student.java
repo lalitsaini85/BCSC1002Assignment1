@@ -23,18 +23,12 @@ public class Student {
         this.allNamesOfBooksIssuedByStudent = allNamesOfBooksIssuedByStudent;
     }
 
-    public Student() {
-        nameOfStudent = getNameOfStudent();
-        universityRollNumberOfStudent = getUniversityRollNumberOfStudent();
-        numberOfBooksIssuedByStudent = getNumberOfBooksIssuedByStudent();
-        this.allNamesOfBooksIssuedByStudent = new Book[numberOfBooksIssuedByStudent];
-        for (int index = 0; index < allNamesOfBooksIssuedByStudent.length; index++) {
-            allNamesOfBooksIssuedByStudent[index] = new Book();
-        }
-    }
-
     public Student(Book[] allNamesOfBooksIssuedByStudent) {
         this.allNamesOfBooksIssuedByStudent = allNamesOfBooksIssuedByStudent;
+    }
+
+    public Student() {
+
     }
 
     public String getNameOfStudent() {

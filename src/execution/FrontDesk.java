@@ -35,8 +35,6 @@ public class FrontDesk {
             System.out.println("4. Exit.");
             System.out.println("Enter your choice from 1 to 4: ");
             studentInput = scanner.nextInt();
-            //int countIssuedBook = student.getNumberOfBooksIssuedByStudent();
-            //student.setNumberOfBooksIssuedByStudent(countIssuedBook--);
             switch (studentInput) {
                 case ISSUE_NEW_BOOK -> {
                     System.out.println("Enter your name: ");
