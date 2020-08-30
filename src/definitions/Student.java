@@ -99,9 +99,6 @@ public class Student {
      */
     public void addIssuedBook(String bookName, String studentName) {
         System.out.println(studentName + ", You have issued " + bookName + ".");
-        for (int i = 0; i < allNamesOfBooksIssuedByStudent.length; i++) {
-            allNamesOfBooksIssuedByStudent[i] = book.setNameOfBook(bookName);
-        }
     }
 
     /**
