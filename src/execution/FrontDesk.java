@@ -58,10 +58,7 @@ public class FrontDesk {
                     student.doReturnBook(book.getNameOfBook());
                     book.setNameOfBook(null);
                 }
-                case SHOW_ALL_MY_ISSUES_BOOKS -> {
-                    System.out.println(book.getNameOfBook());
-                    student.showAllMyIssuedBooks();
-                }
+                case SHOW_ALL_MY_ISSUES_BOOKS -> System.out.println(book.getNameOfBook());
                 default -> System.out.println("WRONG CHOICE!!");
             }
         } while (studentInput != EXIT);
