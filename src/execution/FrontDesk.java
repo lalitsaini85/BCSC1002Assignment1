@@ -19,6 +19,8 @@ public class FrontDesk {
     private static final int SHOW_ALL_MY_ISSUES_BOOKS = 3;
     private static final int EXIT = 4;
 
+    private Student studentDetails;
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int studentInput;
