@@ -65,5 +65,6 @@ public class FrontDesk {
                 default -> System.out.println("WRONG CHOICE!!");
             }
         } while (studentInput != EXIT);
+        scanner.close();
     }
 }
